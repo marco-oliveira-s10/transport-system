@@ -1,0 +1,339 @@
+/* styles.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Suas variáveis CSS e estilos base */
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-white: #fff;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-body-bg: #f8f9fa;
+    --bs-body-color: #212529;
+}
+
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+}
+
+/* Variáveis do Bootstrap */
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-white: #fff;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-body-bg: #f8f9fa;
+    --bs-body-color: #212529;
+}
+
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bs-primary) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 500;
+}
+
+/* Cards */
+.card {
+    background-color: var(--bs-white);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: var(--bs-primary);
+    color: white;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1.25rem;
+}
+
+/* Botões */
+.btn {
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Formulários */
+.form-control {
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.input-group-text {
+    background-color: var(--bs-primary);
+    color: white;
+    border: none;
+}
+
+/* Tabelas */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: var(--bs-primary);
+    color: white;
+    font-weight: 500;
+    padding: 1rem;
+    border: none;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+}
+
+/* Modo Escuro */
+.dark-mode {
+    --bs-body-bg: #212529;
+    --bs-body-color: #f8f9fa;
+}
+
+.dark-mode .card {
+    background-color: #2d3338;
+}
+
+.dark-mode .table {
+    color: #f8f9fa !important;
+}
+
+.dark-mode .table tbody td {
+    color: #f8f9fa !important;
+}
+
+.dark-mode .table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #2d3338 !important;
+    border-color: #444;
+    color: #f8f9fa !important;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #adb5bd;
+}
+
+.dark-mode .form-label {
+    color: #f8f9fa !important;
+}
+
+.dark-mode .modal-content {
+    background-color: #2d3338;
+    color: #f8f9fa;
+}
+
+.dark-mode .modal-header {
+    border-bottom-color: #444;
+}
+
+.dark-mode .modal-footer {
+    border-top-color: #444;
+}
+
+.dark-mode .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* Paginação */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-link {
+    color: var(--bs-primary);
+    padding: 0.5rem 0.75rem;
+}
+
+.page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.dark-mode .page-link {
+    background-color: #2d3338;
+    border-color: #444;
+    color: #f8f9fa;
+}
+
+.dark-mode .page-link:hover {
+    background-color: #3d4449;
+    border-color: #444;
+    color: #f8f9fa;
+}
+
+.dark-mode .page-item.disabled .page-link {
+    background-color: #212529;
+    border-color: #444;
+    color: #6c757d;
+}
+
+/* Loading State */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode .loading::after {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Toast */
+.toast-container {
+    z-index: 1056;
+}
+
+.toast {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .toast {
+    background-color: #2d3338;
+    color: #f8f9fa;
+}
+
+/* Animações */
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .table-responsive {
+        margin: 0 -1rem;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}
+
+/* Validação de Formulários */
+.invalid-feedback {
+    display: block;
+    color: var(--bs-danger);
+}
+
+.dark-mode .invalid-feedback {
+    color: #ff6b6b;
+}
+
+.form-control.is-invalid {
+    border-color: var(--bs-danger);
+    background-image: none;
+}
+
+.dark-mode .form-control.is-invalid {
+    border-color: #ff6b6b;
+}
+
+/* Acessibilidade */
+:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.dark-mode :focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
